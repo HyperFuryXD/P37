@@ -90,11 +90,18 @@ back.velocityX = -(6 + 3*count/100);
     break;
     case 40: monkey.scale= 0.18;
       
-      
+      if(count === 200){
+        BananaGroup.visibility=  false;
+        monkey.visibility = false;
+        StoneGroup.visibility= false;
+      }
   }
 drawSprites();  
 text("SURVIVAL TIME:"+count,150,70);
    text("SCORE:"+score,180,85);
+   }
+   if(count===200){
+       text("GAME OVER",200,200);
    }
 
 function Banana(){
